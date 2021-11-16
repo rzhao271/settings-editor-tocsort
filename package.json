@@ -14,58 +14,74 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"configuration": [{
-			"type": "object",
-			"title": "B configuration",
-			"properties": {
-			  "B setting": {
-				"type": "string",
-				"order": 3
-			  },
-			  "A setting": {
-				"type": "string",
-				"order": 2
-			  },
-			  "C setting": {
-				"type": "string"
-			  }
-			}
-		  },
-		  {
-			"type": "object",
-			"title": "A configuration",
-			"order": 1,
-			"properties": {
-				"E setting": {
-					"type": "string",
-					"order": 3
-				},
-				"D setting": {
-					"type": "string",
-					"order": 2
-				},
-				"F setting": {
-					"type": "string"
+		"configuration": [
+			{
+				"type": "object",
+				"title": "B configuration",
+				"properties": {
+					"B setting": {
+						"type": "string",
+						"order": 3
+					},
+					"A setting": {
+						"type": "string",
+						"order": 2
+					},
+					"C setting": {
+						"type": "string"
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "A configuration",
+				"order": 1,
+				"properties": {
+					"E setting": {
+						"type": "string",
+						"order": 3
+					},
+					"D setting": {
+						"type": "string",
+						"order": 2
+					},
+					"F setting": {
+						"type": "string"
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "C configuration",
+				"properties": {
+					"H setting": {
+						"type": "string",
+						"order": 3
+					},
+					"G setting": {
+						"type": "string",
+						"order": 2
+					},
+					"I setting": {
+						"type": "string"
+					}
+				}
+			},
+			{
+				"type": "object",
+				"title": "Z extension",
+				"properties": {
+					"J setting": {
+						"type": "string"
+					},
+					"K setting": {
+						"type": "string"
+					},
+					"L setting": {
+						"type": "string"
+					}
 				}
 			}
-		  },
-		  {
-			"type": "object",
-			"title": "C configuration",
-			"properties": {
-				"H setting": {
-					"type": "string",
-					"order": 3
-				},
-				"G setting": {
-					"type": "string",
-					"order": 2
-				},
-				"I setting": {
-					"type": "string"
-				}
-			}
-		  }
 		]
 	},
 	"scripts": {
