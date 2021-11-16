@@ -1,0 +1,92 @@
+{
+	"name": "settings-editor-tocsort",
+	"displayName": "Z extension",
+	"description": "Test the way the Settings editor ToC sorts settings",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.46.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": [{
+			"type": "object",
+			"title": "B configuration",
+			"properties": {
+			  "B setting": {
+				"type": "string",
+				"order": 3
+			  },
+			  "A setting": {
+				"type": "string",
+				"order": 2
+			  },
+			  "C setting": {
+				"type": "string"
+			  }
+			}
+		  },
+		  {
+			"type": "object",
+			"title": "A configuration",
+			"order": 1,
+			"properties": {
+				"E setting": {
+					"type": "string",
+					"order": 3
+				},
+				"D setting": {
+					"type": "string",
+					"order": 2
+				},
+				"F setting": {
+					"type": "string"
+				}
+			}
+		  },
+		  {
+			"type": "object",
+			"title": "C configuration",
+			"properties": {
+				"H setting": {
+					"type": "string",
+					"order": 3
+				},
+				"G setting": {
+					"type": "string",
+					"order": 2
+				},
+				"I setting": {
+					"type": "string"
+				}
+			}
+		  }
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.46.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.0.27",
+		"eslint": "^7.6.0",
+		"@typescript-eslint/eslint-plugin": "^3.8.0",
+		"@typescript-eslint/parser": "^3.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0"
+	}
+}
